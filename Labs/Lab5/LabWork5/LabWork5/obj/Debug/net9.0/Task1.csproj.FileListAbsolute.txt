@@ -1,0 +1,14 @@
+C:\temp\ispp31\LabWork5\LabWork5\bin\Debug\net9.0\Task1.exe
+C:\temp\ispp31\LabWork5\LabWork5\bin\Debug\net9.0\Task1.deps.json
+C:\temp\ispp31\LabWork5\LabWork5\bin\Debug\net9.0\Task1.runtimeconfig.json
+C:\temp\ispp31\LabWork5\LabWork5\bin\Debug\net9.0\Task1.dll
+C:\temp\ispp31\LabWork5\LabWork5\bin\Debug\net9.0\Task1.pdb
+C:\temp\ispp31\LabWork5\LabWork5\obj\Debug\net9.0\Task1.GeneratedMSBuildEditorConfig.editorconfig
+C:\temp\ispp31\LabWork5\LabWork5\obj\Debug\net9.0\Task1.AssemblyInfoInputs.cache
+C:\temp\ispp31\LabWork5\LabWork5\obj\Debug\net9.0\Task1.AssemblyInfo.cs
+C:\temp\ispp31\LabWork5\LabWork5\obj\Debug\net9.0\Task1.csproj.CoreCompileInputs.cache
+C:\temp\ispp31\LabWork5\LabWork5\obj\Debug\net9.0\Task1.dll
+C:\temp\ispp31\LabWork5\LabWork5\obj\Debug\net9.0\refint\Task1.dll
+C:\temp\ispp31\LabWork5\LabWork5\obj\Debug\net9.0\Task1.pdb
+C:\temp\ispp31\LabWork5\LabWork5\obj\Debug\net9.0\Task1.genruntimeconfig.cache
+C:\temp\ispp31\LabWork5\LabWork5\obj\Debug\net9.0\ref\Task1.dll

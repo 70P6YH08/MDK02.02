@@ -1,0 +1,14 @@
+C:\temp\ispp31\LabWork5\LabWork5\bin\Release\net9.0\LabWork5.exe
+C:\temp\ispp31\LabWork5\LabWork5\bin\Release\net9.0\LabWork5.deps.json
+C:\temp\ispp31\LabWork5\LabWork5\bin\Release\net9.0\LabWork5.runtimeconfig.json
+C:\temp\ispp31\LabWork5\LabWork5\bin\Release\net9.0\LabWork5.dll
+C:\temp\ispp31\LabWork5\LabWork5\bin\Release\net9.0\LabWork5.pdb
+C:\temp\ispp31\LabWork5\LabWork5\obj\Release\net9.0\LabWork5.GeneratedMSBuildEditorConfig.editorconfig
+C:\temp\ispp31\LabWork5\LabWork5\obj\Release\net9.0\LabWork5.AssemblyInfoInputs.cache
+C:\temp\ispp31\LabWork5\LabWork5\obj\Release\net9.0\LabWork5.AssemblyInfo.cs
+C:\temp\ispp31\LabWork5\LabWork5\obj\Release\net9.0\LabWork5.csproj.CoreCompileInputs.cache
+C:\temp\ispp31\LabWork5\LabWork5\obj\Release\net9.0\LabWork5.dll
+C:\temp\ispp31\LabWork5\LabWork5\obj\Release\net9.0\refint\LabWork5.dll
+C:\temp\ispp31\LabWork5\LabWork5\obj\Release\net9.0\LabWork5.pdb
+C:\temp\ispp31\LabWork5\LabWork5\obj\Release\net9.0\LabWork5.genruntimeconfig.cache
+C:\temp\ispp31\LabWork5\LabWork5\obj\Release\net9.0\ref\LabWork5.dll

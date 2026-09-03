@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "JDHC4bijb8g=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\gorbu\\Desktop\\All\\collage\\4year1semestr\\MDK02.02\\LabWorks\\Lab5\\LabWork5\\Task4\\Task4.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gorbu\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.11\\microsoft.extensions.dependencyinjection.abstractions.10.0.11.nupkg.sha512",
+    "C:\\Users\\gorbu\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\10.0.11\\microsoft.extensions.logging.abstractions.10.0.11.nupkg.sha512",
+    "C:\\Users\\gorbu\\.nuget\\packages\\system.diagnostics.diagnosticsource\\10.0.11\\system.diagnostics.diagnosticsource.10.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}

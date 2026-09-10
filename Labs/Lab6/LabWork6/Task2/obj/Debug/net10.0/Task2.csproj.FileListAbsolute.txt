@@ -1,0 +1,15 @@
+C:\temp\ispp31\MDK02.02\Labs\Lab6\LabWork6\Task2\bin\Debug\net10.0\Task2.exe
+C:\temp\ispp31\MDK02.02\Labs\Lab6\LabWork6\Task2\bin\Debug\net10.0\Task2.deps.json
+C:\temp\ispp31\MDK02.02\Labs\Lab6\LabWork6\Task2\bin\Debug\net10.0\Task2.runtimeconfig.json
+C:\temp\ispp31\MDK02.02\Labs\Lab6\LabWork6\Task2\bin\Debug\net10.0\Task2.dll
+C:\temp\ispp31\MDK02.02\Labs\Lab6\LabWork6\Task2\bin\Debug\net10.0\Task2.pdb
+C:\temp\ispp31\MDK02.02\Labs\Lab6\LabWork6\Task2\obj\Debug\net10.0\Task2.GeneratedMSBuildEditorConfig.editorconfig
+C:\temp\ispp31\MDK02.02\Labs\Lab6\LabWork6\Task2\obj\Debug\net10.0\Task2.AssemblyInfoInputs.cache
+C:\temp\ispp31\MDK02.02\Labs\Lab6\LabWork6\Task2\obj\Debug\net10.0\Task2.AssemblyInfo.cs
+C:\temp\ispp31\MDK02.02\Labs\Lab6\LabWork6\Task2\obj\Debug\net10.0\Task2.csproj.CoreCompileInputs.cache
+C:\temp\ispp31\MDK02.02\Labs\Lab6\LabWork6\Task2\obj\Debug\net10.0\Task2.sourcelink.json
+C:\temp\ispp31\MDK02.02\Labs\Lab6\LabWork6\Task2\obj\Debug\net10.0\Task2.dll
+C:\temp\ispp31\MDK02.02\Labs\Lab6\LabWork6\Task2\obj\Debug\net10.0\refint\Task2.dll
+C:\temp\ispp31\MDK02.02\Labs\Lab6\LabWork6\Task2\obj\Debug\net10.0\Task2.pdb
+C:\temp\ispp31\MDK02.02\Labs\Lab6\LabWork6\Task2\obj\Debug\net10.0\Task2.genruntimeconfig.cache
+C:\temp\ispp31\MDK02.02\Labs\Lab6\LabWork6\Task2\obj\Debug\net10.0\ref\Task2.dll

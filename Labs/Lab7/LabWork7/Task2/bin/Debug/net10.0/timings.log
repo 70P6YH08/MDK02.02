@@ -1,4 +1,45 @@
-[2026-09-14 10:04:16] Operation=GetNewDirectory,Elapsed=2481
+[2026-09-15 00:56:30] Operation=GetNewDirectoryAsync,Elapsed=6431
+[2026-09-15 00:56:30] Operation=GetWordsCountAsync,Elapsed=27
+[2026-09-15 00:56:34] Operation=GetUsersAsync,Elapsed=3857
 
-[2026-09-14 10:04:16] Operation=ReadWordsCount,Elapsed=2500
+[2026-09-15 00:58:50] Operation=GetNewDirectoryAsync,Elapsed=6058
+[2026-09-15 00:58:50] Operation=GetWordsCountAsync,Elapsed=26
+[2026-09-15 00:58:50] Operation=GetUsersAsync,Elapsed=535
+
+[2026-09-15 01:03:50] Operation=GetNewDirectoryAsync,Elapsed=6131
+[2026-09-15 01:03:50] Operation=GetWordsCountAsync,Elapsed=24
+[2026-09-15 01:03:51] Operation=GetUsersAsync,Elapsed=526
+
+[2026-09-15 01:06:21] Operation=GetNewDirectoryAsync,Elapsed=7505
+[2026-09-15 01:06:21] Operation=GetWordsCountAsync,Elapsed=30
+[2026-09-15 01:06:22] Operation=GetUsersAsync,Elapsed=551
+
+[2026-09-15 01:08:00] Operation=GetNewDirectoryAsync,Elapsed=5959
+[2026-09-15 01:08:00] Operation=GetWordsCountAsync,Elapsed=25
+[2026-09-15 01:08:00] Operation=GetUsersAsync,Elapsed=516
+
+[2026-09-15 01:15:41] Operation=GetNewDirectoryAsync,Elapsed=5886
+[2026-09-15 01:15:41] Operation=GetWordsCountAsync,Elapsed=25
+[2026-09-15 01:15:42] Operation=GetUsersAsync,Elapsed=516
+Общее время выполения: 6420
+
+[2026-09-15 01:16:15] Operation=GetNewDirectoryAsync,Elapsed=6005
+[2026-09-15 01:16:15] Operation=GetWordsCountAsync,Elapsed=25
+[2026-09-15 01:16:16] Operation=GetUsersAsync,Elapsed=492
+Общее время выполения: 6514
+
+[2026-09-15 01:20:54] Operation=GetNewDirectoryAsync,Elapsed=6100
+[2026-09-15 01:20:54] Operation=GetWordsCountAsync,Elapsed=24
+[2026-09-15 01:20:54] Operation=GetUsersAsync,Elapsed=40
+Общее время выполения: 6153
+
+[2026-09-15 01:23:51] Operation=GetNewDirectoryAsync,Elapsed=6179
+[2026-09-15 01:23:51] Operation=GetWordsCountAsync,Elapsed=24
+[2026-09-15 01:23:52] Operation=GetUsersAsync,Elapsed=479
+Общее время выполения: 6682
+
+[2026-09-15 01:25:26] Operation=GetNewDirectoryAsync,Elapsed=5804
+[2026-09-15 01:26:05] Operation=GetWordsCountAsync,Elapsed=39032
+[2026-09-15 01:26:06] Operation=GetUsersAsync,Elapsed=732
+Общее время выполения: 45568
 

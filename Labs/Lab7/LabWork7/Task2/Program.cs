@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
-using System.Net.Http.Json;
+using System.Reflection;
 using System.Text.Json;
-using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
+using Task2;
 
 string dirPath = @"C:\Program Files";
 DirectoryInfo currentDir = new DirectoryInfo(dirPath);
@@ -13,36 +13,96 @@ int countWords = 0;
 
 string logFilePath = @"timings.log";
 long totalMs = 0;
+int counter = 0;
+long averageMs = 0;
+int methodId = 0;
 
 Stopwatch stopwatch = new Stopwatch();
 
 
-stopwatch.Start();
-await GetNewDirectoryAsync(currentDir);
-stopwatch.Stop();
-totalMs += stopwatch.ElapsedMilliseconds;
-Console.WriteLine($"Всего файлов в папке {dirPath}: {countFiles}");
-await LogOperationsAsync(logFilePath, nameof(GetNewDirectoryAsync));
+//while(counter < 3)
+//{
+//    stopwatch.Start();
+//    await GetNewDirectoryAsync(currentDir);
+//    stopwatch.Stop();
+//    averageMs += stopwatch.ElapsedMilliseconds;
+//    counter++;
+//}
+//counter = 0;
+//totalMs += stopwatch.ElapsedMilliseconds;
+//Debug.WriteLine($"Всего файлов в папке {dirPath}: {countFiles}");
+//await LogOperationsAsync(logFilePath, nameof(GetNewDirectoryAsync));
 
-stopwatch.Restart();
-await GetWordsCountAsync(textFilePath, countWords);
-stopwatch.Stop();
-totalMs += stopwatch.ElapsedMilliseconds;
-Console.WriteLine($"Количество слов в файле: {countWords}");
-await LogOperationsAsync(logFilePath, nameof(GetWordsCountAsync));
+//stopwatch.Restart();
+//await GetWordsCountAsync(textFilePath);
+//counter = 0;
+//stopwatch.Stop();
+//totalMs += stopwatch.ElapsedMilliseconds;
+//Debug.WriteLine($"Количество слов в файле: {countWords}");
+//await LogOperationsAsync(logFilePath, nameof(GetWordsCountAsync));
 
-stopwatch.Restart();
-await GetUsersAsync();
-stopwatch.Stop();
-totalMs += stopwatch.ElapsedMilliseconds;
-Console.WriteLine($"Вывод завершён");
-await LogOperationsAsync(logFilePath, nameof(GetUsersAsync));
-File.AppendAllText(logFilePath, $"Общее время выполения: {totalMs}\n\n");
+//stopwatch.Restart();
+//await GetUsersAsync();
+//stopwatch.Stop();
+//totalMs += stopwatch.ElapsedMilliseconds;
+//Debug.WriteLine($"Вывод завершён");
+//await LogOperationsAsync(logFilePath, nameof(GetUsersAsync));
+
+Dictionary<int, Task> methods = new Dictionary<int, Task>()
+{
+    { 0, Task.Run(async () => GetNewDirectoryAsync(currentDir)) },
+    { 1, Task.Run(async () => GetWordsCountAsync(textFilePath)) },
+    { 2, Task.Run(async () => GetUsersAsync()) }
+};
+
+await ReturnMethodsAsync();
+
+
+async Task ReturnMethodsAsync()
+{
+    while(methodId < 3)
+    {
+        string methodName = "";
+        while (counter < 3)
+        {
+            stopwatch.Start();
+            await methods[methodId];
+            stopwatch.Stop();
+
+            averageMs += stopwatch.ElapsedMilliseconds;
+
+            switch (methodId)
+            {
+                case 0:
+                    Debug.WriteLine($"Всего файлов в папке {dirPath}: {countFiles}");
+                    methodName = nameof(GetNewDirectoryAsync);
+                    break;
+                case 1:
+                    Debug.WriteLine($"Количество слов в файле: {countWords}");
+                    methodName = nameof(GetWordsCountAsync);
+                    break;
+                case 2:
+                    Debug.WriteLine($"Вывод завершён");
+                    methodName = nameof(GetUsersAsync);
+                    break;
+            }
+            await LogOperationsAsync(logFilePath, methodName);
+            counter++;
+        }
+
+        File.AppendAllText(logFilePath, $"Среднее время выполнения метода {methodName}: {averageMs / 3}\n");
+        totalMs += averageMs;
+        averageMs = 0;
+        methodId++;
+    }
+
+    File.AppendAllText(logFilePath, $"Общее время выполения: {totalMs}\n\n");
+}
+
 
 async Task LogOperationsAsync(string logFilePath, string methodName) =>
     File.AppendAllText(logFilePath, $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] Operation={methodName}," +
     $"Elapsed={stopwatch.ElapsedMilliseconds}\n");
-
 
 async Task GetUsersAsync()
 {
@@ -64,16 +124,16 @@ async Task GetUsersAsync()
             if (cat == null)
                 return;
 
-            Console.WriteLine($"{cat.Fact} - {cat.Length}");
+            Debug.WriteLine($"{cat.Fact} - {cat.Length}");
         }
         else
-            Console.WriteLine($"Ошибка: {response.StatusCode}");
+            Debug.WriteLine($"Ошибка: {response.StatusCode}");
     }
 }
 
 
 
-static async Task GetWordsCountAsync(string filePath, int countWords)
+async Task GetWordsCountAsync(string filePath)
 {
     if (!File.Exists(filePath))
     {
@@ -113,14 +173,6 @@ async Task GetNewDirectoryAsync(DirectoryInfo currentDir)
     }
     catch (Exception ex)
     {
-        Console.WriteLine(ex.Message);
+        Debug.WriteLine(ex.Message);
     }
-}
-public class Cat
-{
-    [JsonPropertyName("fact")]
-    public string Fact { get; set; } = null!;
-
-    [JsonPropertyName("length")]
-    public int Length { get; set; }
 }

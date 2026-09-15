@@ -44,5 +44,5 @@ catch(Exception ex)
 static void LogErrors(Exception ex)
 {
     string textFilePath = "log.txt";
-    File.AppendAllText(textFilePath, $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] {ex.ToString()}\n\n");
+    File.AppendAllText(textFilePath, $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] {ex}\n\n");
 }

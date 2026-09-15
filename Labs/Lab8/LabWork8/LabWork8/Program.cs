@@ -1,4 +1,4 @@
-// Исходный код приложения для рефакторинга.
+﻿// Исходный код приложения для рефакторинга.
 // Рефакторинг зафиксировать в текстовом документе со столбцами 
 // Задание | Исходный код | Код после рефакторинга
 // Разнести типы данных по разным файлам.
@@ -6,6 +6,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using Microsoft.EntityFrameworkCore;
 
 namespace OrderManagementApp
@@ -26,9 +27,24 @@ namespace OrderManagementApp
     public class Customer
     {
         public int Id { get; set; }
-        public string Name;
+        private string _name;
+
+        public string Name
+        {
+            get => _name;
+            set
+            {
+                if (String.IsNullOrEmpty(value))
+                    throw new ArgumentException("Имя не может быть пустым");
+                _name = value;
+            }
+        }
         public string Email;
         public List<Order> Orders { get; set; }
+
+        public void PrintCustomerInfo() =>
+            Console.WriteLine($"Customer name: {Name}\nCustomer email: {Email}");
+
     }
 
     // Класс Order (заказ)
@@ -60,7 +76,11 @@ namespace OrderManagementApp
         public void PrintCustomerInfo(int customerId)
         {
             var customer = _dbContext.Customers.Include(c => c.Orders).FirstOrDefault(c => c.Id == customerId);
-            Console.WriteLine("Customer: " + customer.Name);
+
+            if (customer == null)
+                return;
+
+            Console.WriteLine("Customer name: " + customer.Name);
             Console.WriteLine("Email: " + customer.Email);
         }
     }
@@ -68,6 +88,11 @@ namespace OrderManagementApp
     // Сервис для работы с заказами
     public class OrderService
     {
+        private double _tax = 0.2;
+        private double _discountPercent = 0.1;
+        private double _minDiscountPrice = 10000;
+        private double _discount = 0;
+
         private readonly AppDbContext _dbContext;
 
         public OrderService(AppDbContext dbContext)
@@ -84,31 +109,45 @@ namespace OrderManagementApp
         public void PrintOrderDetails(int orderId)
         {
             var order = _dbContext.Orders.Include(o => o.Customer).FirstOrDefault(o => o.Id == orderId);
-            Console.WriteLine("Order Id: " + order.Id);
-            Console.WriteLine("Total: " + order.Total);
-            Console.WriteLine("Express Shipping: " + (order.IsExpress ? "Yes" : "No"));
-            Console.WriteLine("Customer Email: " + order.Customer.Email);
+
+            if (order == null)
+            {
+                Console.WriteLine("Такого заказа не существует!");
+                return;
+            }
+
+            PrintOrderInfo(order);
         }
+
+        public void PrintOrderInfo(Order order)
+        {
+            PrintOrderId(order);
+            PrintOrderTotalPrice(order);
+            PrintExpressOrder(order);
+            order.Customer.PrintCustomerInfo();
+        }
+
+        public static void PrintOrderId(Order order) =>
+            Console.WriteLine($"Order Id: {order.Id}");
+
+        public static void PrintOrderTotalPrice(Order order) =>
+            Console.WriteLine($"Order Id: {order.Total}");
+
+        public static void PrintExpressOrder(Order order) =>
+            Console.WriteLine($"Order Id: {order.IsExpress}");
 
         public double CalculateFinalPrice(Order order)
         {
-			double tax = 0.2; // НДС
-			// скидка 10% при заказе от 10000
-            double discount = 0;
-            double minDiscountPrice = 10000;
-            double discountPercent = 0.1;
-
-            if (order.Total > minDiscountPrice)
-			{
-				discount = order.Total * discountPercent;
-			}
-			else
-			{
-				discount = 0;
-			}
-			// итоговая цена
-			return order.Total - discount + (order.Total * tax);
+            CalculateDiscount(order);
+            double finalPrice = CountFinalPrice(order);
+            // итоговая цена
+            return finalPrice;
         }
+        private double CountFinalPrice(Order order) =>
+            order.Total - _discount + (order.Total * _tax);
+        private void CalculateDiscount(Order order) =>
+            _discount = (order.Total > _minDiscountPrice) ? order.Total * _discountPercent : _discount = 0;
+
     }
 
     class Program

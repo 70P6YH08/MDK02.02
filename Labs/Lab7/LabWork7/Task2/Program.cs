@@ -12,47 +12,14 @@ string textFilePath = "Dostoevsky.txt";
 int countWords = 0;
 
 string logFilePath = @"timings.log";
-long totalMs = 0;
-int counter = 0;
-long averageMs = 0;
-int methodId = 0;
 
 Stopwatch stopwatch = new Stopwatch();
 
-
-//while(counter < 3)
-//{
-//    stopwatch.Start();
-//    await GetNewDirectoryAsync(currentDir);
-//    stopwatch.Stop();
-//    averageMs += stopwatch.ElapsedMilliseconds;
-//    counter++;
-//}
-//counter = 0;
-//totalMs += stopwatch.ElapsedMilliseconds;
-//Debug.WriteLine($"Всего файлов в папке {dirPath}: {countFiles}");
-//await LogOperationsAsync(logFilePath, nameof(GetNewDirectoryAsync));
-
-//stopwatch.Restart();
-//await GetWordsCountAsync(textFilePath);
-//counter = 0;
-//stopwatch.Stop();
-//totalMs += stopwatch.ElapsedMilliseconds;
-//Debug.WriteLine($"Количество слов в файле: {countWords}");
-//await LogOperationsAsync(logFilePath, nameof(GetWordsCountAsync));
-
-//stopwatch.Restart();
-//await GetUsersAsync();
-//stopwatch.Stop();
-//totalMs += stopwatch.ElapsedMilliseconds;
-//Debug.WriteLine($"Вывод завершён");
-//await LogOperationsAsync(logFilePath, nameof(GetUsersAsync));
-
-Dictionary<int, Task> methods = new Dictionary<int, Task>()
+Dictionary<int, Func<Task>> methods = new Dictionary<int, Func<Task>>()
 {
-    { 0, Task.Run(async () => GetNewDirectoryAsync(currentDir)) },
-    { 1, Task.Run(async () => GetWordsCountAsync(textFilePath)) },
-    { 2, Task.Run(async () => GetUsersAsync()) }
+    { 0, () => GetAllFilesByDirectory(currentDir) },
+    { 1, () => GetWordsCountAsync(textFilePath) },
+    { 2, () => GetCatAsync() }
 };
 
 await ReturnMethodsAsync();
@@ -60,13 +27,18 @@ await ReturnMethodsAsync();
 
 async Task ReturnMethodsAsync()
 {
-    while(methodId < 3)
+    int methodId = 0;
+
+    double totalMs = 0;
+    while (methodId < methods.Count)
     {
+        double averageMs = 0;
+        int counter = 0;
         string methodName = "";
         while (counter < 3)
         {
-            stopwatch.Start();
-            await methods[methodId];
+            stopwatch.Restart();
+            await methods[methodId]();
             stopwatch.Stop();
 
             averageMs += stopwatch.ElapsedMilliseconds;
@@ -75,7 +47,7 @@ async Task ReturnMethodsAsync()
             {
                 case 0:
                     Debug.WriteLine($"Всего файлов в папке {dirPath}: {countFiles}");
-                    methodName = nameof(GetNewDirectoryAsync);
+                    methodName = nameof(GetAllFilesByDirectory);
                     break;
                 case 1:
                     Debug.WriteLine($"Количество слов в файле: {countWords}");
@@ -83,16 +55,15 @@ async Task ReturnMethodsAsync()
                     break;
                 case 2:
                     Debug.WriteLine($"Вывод завершён");
-                    methodName = nameof(GetUsersAsync);
+                    methodName = nameof(GetCatAsync);
                     break;
             }
             await LogOperationsAsync(logFilePath, methodName);
             counter++;
         }
 
-        File.AppendAllText(logFilePath, $"Среднее время выполнения метода {methodName}: {averageMs / 3}\n");
+        File.AppendAllText(logFilePath, $"Среднее время выполнения метода {methodName}: {Math.Round(averageMs / 3, 2)}\n");
         totalMs += averageMs;
-        averageMs = 0;
         methodId++;
     }
 
@@ -104,7 +75,7 @@ async Task LogOperationsAsync(string logFilePath, string methodName) =>
     File.AppendAllText(logFilePath, $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] Operation={methodName}," +
     $"Elapsed={stopwatch.ElapsedMilliseconds}\n");
 
-async Task GetUsersAsync()
+async Task GetCatAsync()
 {
     string baseUrl = "https://catfact.ninja";
     string endpoint = "/fact";
@@ -157,7 +128,7 @@ async Task GetWordsCountAsync(string filePath)
 }
 
 
-async Task GetNewDirectoryAsync(DirectoryInfo currentDir)
+async Task GetAllFilesByDirectory(DirectoryInfo currentDir)
 {
     try
     {
@@ -169,7 +140,7 @@ async Task GetNewDirectoryAsync(DirectoryInfo currentDir)
         DirectoryInfo[] subDirs = currentDir.GetDirectories();
 
         foreach (var subDir in subDirs)
-            await GetNewDirectoryAsync(subDir);
+            await GetAllFilesByDirectory(subDir);
     }
     catch (Exception ex)
     {

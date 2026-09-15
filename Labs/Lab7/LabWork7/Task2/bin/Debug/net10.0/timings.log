@@ -1,48 +1,193 @@
-[2026-09-15 09:55:00] Operation=GetNewDirectoryAsync,Elapsed=2159
-[2026-09-15 09:55:00] Operation=GetNewDirectoryAsync,Elapsed=2159
-[2026-09-15 09:55:00] Operation=GetNewDirectoryAsync,Elapsed=2159
-Среднее время выполнения метода GetNewDirectoryAsync: 2159
-Среднее время выполнения метода : 0
-Среднее время выполнения метода : 0
-Общее время выполения: 6477
+timings.log[2026-09-15 14:24:19] Operation=GetNewDirectoryAsync,Elapsed=2192
+timings.log[2026-09-15 14:24:19] Operation=GetNewDirectoryAsync,Elapsed=2192
+timings.log[2026-09-15 14:24:19] Operation=GetNewDirectoryAsync,Elapsed=2192
+timings.logСреднее время выполнения метода GetNewDirectoryAsync: 2192
+timings.logСреднее время выполнения метода : 0
+timings.logСреднее время выполнения метода : 0
+timings.logОбщее время выполения: 6576
 
-[2026-09-15 09:57:25] Operation=GetNewDirectoryAsync,Elapsed=2205
-[2026-09-15 09:57:25] Operation=GetNewDirectoryAsync,Elapsed=2205
-[2026-09-15 09:57:25] Operation=GetNewDirectoryAsync,Elapsed=2205
-Среднее время выполнения метода GetNewDirectoryAsync: 2205
+[2026-09-15 14:25:03] Operation=GetNewDirectoryAsync,Elapsed=2242
+[2026-09-15 14:25:03] Operation=GetNewDirectoryAsync,Elapsed=2242
+[2026-09-15 14:25:03] Operation=GetNewDirectoryAsync,Elapsed=2242
+Среднее время выполнения метода GetNewDirectoryAsync: 2242
 Среднее время выполнения метода : 0
 Среднее время выполнения метода : 0
-Общее время выполения: 6615
+Общее время выполения: 6726
 
-[2026-09-15 09:57:57] Operation=GetNewDirectoryAsync,Elapsed=2167
-[2026-09-15 09:57:57] Operation=GetNewDirectoryAsync,Elapsed=2167
-[2026-09-15 09:57:57] Operation=GetNewDirectoryAsync,Elapsed=2167
-Среднее время выполнения метода GetNewDirectoryAsync: 2167
+[2026-09-15 14:26:40] Operation=GetNewDirectoryAsync,Elapsed=2235
+[2026-09-15 14:26:40] Operation=GetNewDirectoryAsync,Elapsed=2235
+[2026-09-15 14:26:40] Operation=GetNewDirectoryAsync,Elapsed=2235
+Среднее время выполнения метода GetNewDirectoryAsync: 2235
+[2026-09-15 14:26:46] Operation=GetNewDirectoryAsync,Elapsed=2137
+[2026-09-15 14:27:04] Operation=GetNewDirectoryAsync,Elapsed=2137
+[2026-09-15 14:27:06] Operation=GetNewDirectoryAsync,Elapsed=2137
+Среднее время выполнения метода GetNewDirectoryAsync: 2137
 Среднее время выполнения метода : 0
 Среднее время выполнения метода : 0
-Общее время выполения: 6501
+Общее время выполения: 6411
 
-[2026-09-15 09:58:07] Operation=GetNewDirectoryAsync,Elapsed=2144
-[2026-09-15 09:58:07] Operation=GetNewDirectoryAsync,Elapsed=2144
-[2026-09-15 09:58:07] Operation=GetNewDirectoryAsync,Elapsed=2144
-Среднее время выполнения метода GetNewDirectoryAsync: 2144
+[2026-09-15 14:27:37] Operation=GetNewDirectoryAsync,Elapsed=2206
+[2026-09-15 14:28:20] Operation=GetNewDirectoryAsync,Elapsed=15235
+[2026-09-15 14:30:59] Operation=GetNewDirectoryAsync,Elapsed=169049
+[2026-09-15 14:30:59] Operation=GetNewDirectoryAsync,Elapsed=169049
+Среднее время выполнения метода GetNewDirectoryAsync: 117777
 Среднее время выполнения метода : 0
 Среднее время выполнения метода : 0
-Общее время выполения: 6432
+Общее время выполения: 353333
 
-[2026-09-15 09:59:04] Operation=GetNewDirectoryAsync,Elapsed=2142
-[2026-09-15 09:59:04] Operation=GetNewDirectoryAsync,Elapsed=2142
-[2026-09-15 09:59:04] Operation=GetNewDirectoryAsync,Elapsed=2142
-Среднее время выполнения метода GetNewDirectoryAsync: 2142
+[2026-09-15 14:31:04] Operation=GetNewDirectoryAsync,Elapsed=2248
+[2026-09-15 14:31:04] Operation=GetNewDirectoryAsync,Elapsed=2248
+[2026-09-15 14:31:04] Operation=GetNewDirectoryAsync,Elapsed=2248
+Среднее время выполнения метода GetNewDirectoryAsync: 2248
 Среднее время выполнения метода : 0
 Среднее время выполнения метода : 0
-Общее время выполения: 6426
+Общее время выполения: 6744
 
-[2026-09-15 10:01:04] Operation=GetNewDirectoryAsync,Elapsed=2266
-[2026-09-15 10:01:04] Operation=GetNewDirectoryAsync,Elapsed=2266
-[2026-09-15 10:01:04] Operation=GetNewDirectoryAsync,Elapsed=2266
-Среднее время выполнения метода GetNewDirectoryAsync: 2266
+[2026-09-15 14:33:31] Operation=GetNewDirectoryAsync,Elapsed=19509
+[2026-09-15 14:33:34] Operation=GetNewDirectoryAsync,Elapsed=22897
+[2026-09-15 14:33:39] Operation=GetNewDirectoryAsync,Elapsed=27809
+Среднее время выполнения метода GetNewDirectoryAsync: 23405
 Среднее время выполнения метода : 0
 Среднее время выполнения метода : 0
-Общее время выполения: 6798
+Общее время выполения: 70215
+
+[2026-09-15 14:35:01] Operation=GetNewDirectoryAsync,Elapsed=2500
+[2026-09-15 14:35:01] Operation=GetNewDirectoryAsync,Elapsed=2500
+[2026-09-15 14:35:01] Operation=GetNewDirectoryAsync,Elapsed=2500
+Среднее время выполнения метода GetNewDirectoryAsync: 2500
+[2026-09-15 14:35:01] Operation=GetWordsCountAsync,Elapsed=2500
+[2026-09-15 14:35:01] Operation=GetWordsCountAsync,Elapsed=2500
+[2026-09-15 14:35:01] Operation=GetWordsCountAsync,Elapsed=2500
+Среднее время выполнения метода GetWordsCountAsync: 2500
+[2026-09-15 14:35:01] Operation=GetUsersAsync,Elapsed=2500
+[2026-09-15 14:35:01] Operation=GetUsersAsync,Elapsed=2500
+[2026-09-15 14:35:01] Operation=GetUsersAsync,Elapsed=2500
+Среднее время выполнения метода GetUsersAsync: 2500
+Общее время выполения: 22500
+
+[2026-09-15 14:36:54] Operation=GetNewDirectoryAsync,Elapsed=2398
+[2026-09-15 14:36:54] Operation=GetNewDirectoryAsync,Elapsed=0
+[2026-09-15 14:36:54] Operation=GetNewDirectoryAsync,Elapsed=0
+Среднее время выполнения метода GetNewDirectoryAsync: 799
+[2026-09-15 14:36:54] Operation=GetWordsCountAsync,Elapsed=0
+[2026-09-15 14:36:54] Operation=GetWordsCountAsync,Elapsed=0
+[2026-09-15 14:36:54] Operation=GetWordsCountAsync,Elapsed=0
+Среднее время выполнения метода GetWordsCountAsync: 0
+[2026-09-15 14:36:54] Operation=GetUsersAsync,Elapsed=0
+[2026-09-15 14:36:54] Operation=GetUsersAsync,Elapsed=0
+[2026-09-15 14:36:54] Operation=GetUsersAsync,Elapsed=0
+Среднее время выполнения метода GetUsersAsync: 0
+Общее время выполения: 2398
+
+[2026-09-15 14:37:11] Operation=GetNewDirectoryAsync,Elapsed=2157
+[2026-09-15 14:37:11] Operation=GetNewDirectoryAsync,Elapsed=0
+[2026-09-15 14:37:11] Operation=GetNewDirectoryAsync,Elapsed=0
+Среднее время выполнения метода GetNewDirectoryAsync: 719
+[2026-09-15 14:37:11] Operation=GetWordsCountAsync,Elapsed=0
+[2026-09-15 14:37:11] Operation=GetWordsCountAsync,Elapsed=0
+[2026-09-15 14:37:11] Operation=GetWordsCountAsync,Elapsed=0
+Среднее время выполнения метода GetWordsCountAsync: 0
+[2026-09-15 14:37:11] Operation=GetUsersAsync,Elapsed=0
+[2026-09-15 14:37:11] Operation=GetUsersAsync,Elapsed=0
+[2026-09-15 14:37:11] Operation=GetUsersAsync,Elapsed=0
+Среднее время выполнения метода GetUsersAsync: 0
+Общее время выполения: 2157
+
+[2026-09-15 14:41:31] Operation=GetNewDirectoryAsync,Elapsed=2259
+[2026-09-15 14:41:31] Operation=GetNewDirectoryAsync,Elapsed=0
+[2026-09-15 14:41:31] Operation=GetNewDirectoryAsync,Elapsed=0
+Среднее время выполнения метода GetNewDirectoryAsync: 753
+[2026-09-15 14:41:31] Operation=GetWordsCountAsync,Elapsed=0
+[2026-09-15 14:41:31] Operation=GetWordsCountAsync,Elapsed=0
+[2026-09-15 14:41:31] Operation=GetWordsCountAsync,Elapsed=0
+Среднее время выполнения метода GetWordsCountAsync: 0
+[2026-09-15 14:41:31] Operation=GetUsersAsync,Elapsed=0
+[2026-09-15 14:41:31] Operation=GetUsersAsync,Elapsed=0
+[2026-09-15 14:41:31] Operation=GetUsersAsync,Elapsed=0
+Среднее время выполнения метода GetUsersAsync: 0
+Общее время выполения: 2259
+
+[2026-09-15 14:42:30] Operation=GetNewDirectoryAsync,Elapsed=2138
+[2026-09-15 14:42:30] Operation=GetNewDirectoryAsync,Elapsed=0
+[2026-09-15 14:42:30] Operation=GetNewDirectoryAsync,Elapsed=0
+Среднее время выполнения метода GetNewDirectoryAsync: 712,9638
+[2026-09-15 14:42:30] Operation=GetWordsCountAsync,Elapsed=0
+[2026-09-15 14:42:30] Operation=GetWordsCountAsync,Elapsed=0
+[2026-09-15 14:42:30] Operation=GetWordsCountAsync,Elapsed=0
+Среднее время выполнения метода GetWordsCountAsync: 0,0005333333333333333
+[2026-09-15 14:42:30] Operation=GetUsersAsync,Elapsed=0
+[2026-09-15 14:42:30] Operation=GetUsersAsync,Elapsed=0
+[2026-09-15 14:42:30] Operation=GetUsersAsync,Elapsed=0
+Среднее время выполнения метода GetUsersAsync: 0,0008999999999999999
+Общее время выполнения: 2138,8957
+
+[2026-09-15 14:43:51] Operation=GetNewDirectoryAsync,Elapsed=2207
+[2026-09-15 14:43:51] Operation=GetNewDirectoryAsync,Elapsed=0
+[2026-09-15 14:43:51] Operation=GetNewDirectoryAsync,Elapsed=0
+Среднее время выполнения метода GetNewDirectoryAsync: 735,6666666666666
+[2026-09-15 14:43:51] Operation=GetWordsCountAsync,Elapsed=0
+[2026-09-15 14:43:51] Operation=GetWordsCountAsync,Elapsed=0
+[2026-09-15 14:43:51] Operation=GetWordsCountAsync,Elapsed=0
+Среднее время выполнения метода GetWordsCountAsync: 0
+[2026-09-15 14:43:51] Operation=GetUsersAsync,Elapsed=0
+[2026-09-15 14:43:51] Operation=GetUsersAsync,Elapsed=0
+[2026-09-15 14:43:51] Operation=GetUsersAsync,Elapsed=0
+Среднее время выполнения метода GetUsersAsync: 0
+Общее время выполения: 2207
+
+[2026-09-15 14:45:46] Operation=GetNewDirectoryAsync,Elapsed=2131
+[2026-09-15 14:45:48] Operation=GetNewDirectoryAsync,Elapsed=1871
+[2026-09-15 14:45:50] Operation=GetNewDirectoryAsync,Elapsed=1842
+Среднее время выполнения метода GetNewDirectoryAsync: 1948
+[2026-09-15 14:45:50] Operation=GetWordsCountAsync,Elapsed=19
+[2026-09-15 14:45:50] Operation=GetWordsCountAsync,Elapsed=7
+[2026-09-15 14:45:50] Operation=GetWordsCountAsync,Elapsed=15
+Среднее время выполнения метода GetWordsCountAsync: 13,666666666666666
+[2026-09-15 14:45:50] Operation=GetUsersAsync,Elapsed=496
+[2026-09-15 14:45:51] Operation=GetUsersAsync,Elapsed=284
+[2026-09-15 14:45:51] Operation=GetUsersAsync,Elapsed=293
+Среднее время выполнения метода GetUsersAsync: 357,6666666666667
+Общее время выполения: 6958
+
+[2026-09-15 14:46:19] Operation=GetNewDirectoryAsync,Elapsed=2109
+[2026-09-15 14:46:21] Operation=GetNewDirectoryAsync,Elapsed=1902
+[2026-09-15 14:46:22] Operation=GetNewDirectoryAsync,Elapsed=1854
+Среднее время выполнения метода GetNewDirectoryAsync: 1955
+[2026-09-15 14:46:22] Operation=GetWordsCountAsync,Elapsed=21
+[2026-09-15 14:46:22] Operation=GetWordsCountAsync,Elapsed=7
+[2026-09-15 14:46:22] Operation=GetWordsCountAsync,Elapsed=10
+Среднее время выполнения метода GetWordsCountAsync: 12,666666666666666
+[2026-09-15 14:46:23] Operation=GetUsersAsync,Elapsed=565
+[2026-09-15 14:46:23] Operation=GetUsersAsync,Elapsed=299
+[2026-09-15 14:46:24] Operation=GetUsersAsync,Elapsed=297
+Среднее время выполнения метода GetUsersAsync: 387
+Общее время выполения: 7064
+
+[2026-09-15 14:47:09] Operation=GetNewDirectoryAsync,Elapsed=2094
+[2026-09-15 14:47:11] Operation=GetNewDirectoryAsync,Elapsed=1905
+[2026-09-15 14:47:12] Operation=GetNewDirectoryAsync,Elapsed=1849
+Среднее время выполнения метода GetNewDirectoryAsync: 1949,33
+[2026-09-15 14:47:12] Operation=GetWordsCountAsync,Elapsed=20
+[2026-09-15 14:47:12] Operation=GetWordsCountAsync,Elapsed=7
+[2026-09-15 14:47:12] Operation=GetWordsCountAsync,Elapsed=10
+Среднее время выполнения метода GetWordsCountAsync: 12,33
+[2026-09-15 14:47:14] Operation=GetUsersAsync,Elapsed=1299
+[2026-09-15 14:47:14] Operation=GetUsersAsync,Elapsed=294
+[2026-09-15 14:47:14] Operation=GetUsersAsync,Elapsed=302
+Среднее время выполнения метода GetUsersAsync: 631,67
+Общее время выполения: 7780
+
+[2026-09-15 14:53:58] Operation=GetNewDirectoryAsync,Elapsed=2096
+[2026-09-15 14:54:00] Operation=GetNewDirectoryAsync,Elapsed=1874
+[2026-09-15 14:54:01] Operation=GetNewDirectoryAsync,Elapsed=1836
+Среднее время выполнения метода GetNewDirectoryAsync: 1935,33
+[2026-09-15 14:54:01] Operation=GetWordsCountAsync,Elapsed=20
+[2026-09-15 14:54:01] Operation=GetWordsCountAsync,Elapsed=7
+[2026-09-15 14:54:01] Operation=GetWordsCountAsync,Elapsed=10
+Среднее время выполнения метода GetWordsCountAsync: 12,33
+[2026-09-15 14:54:02] Operation=GetCatAsync,Elapsed=625
+[2026-09-15 14:54:02] Operation=GetCatAsync,Elapsed=291
+[2026-09-15 14:54:03] Operation=GetCatAsync,Elapsed=290
+Среднее время выполнения метода GetCatAsync: 402
+Общее время выполения: 7049
 

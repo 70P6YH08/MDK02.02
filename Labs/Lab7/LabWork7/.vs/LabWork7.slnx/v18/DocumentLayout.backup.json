@@ -7,12 +7,8 @@
       "RelativeMoniker": "D:0:0:{BC4E158C-3748-4E76-B471-E3AD13338504}|Task2\\Task2.csproj|solutionrelative:task2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{381916C1-5189-4DD0-B234-06FE52C25D24}|Task3\\Task3.csproj|c:\\temp\\ispp31\\mdk02.02\\labs\\lab7\\labwork7\\task3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{381916C1-5189-4DD0-B234-06FE52C25D24}|Task3\\Task3.csproj|solutionrelative:task3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F59B2AB-2699-D06C-146E-A9BEBACA8A51}|Task1\\Task1.csproj|c:\\temp\\ispp31\\mdk02.02\\labs\\lab7\\labwork7\\task1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F59B2AB-2699-D06C-146E-A9BEBACA8A51}|Task1\\Task1.csproj|solutionrelative:task1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BC4E158C-3748-4E76-B471-E3AD13338504}|Task2\\Task2.csproj|c:\\temp\\ispp31\\mdk02.02\\labs\\lab7\\labwork7\\task2\\cat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC4E158C-3748-4E76-B471-E3AD13338504}|Task2\\Task2.csproj|solutionrelative:task2\\cat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,32 +18,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab7\\LabWork7\\Task3\\Program.cs",
-              "RelativeDocumentMoniker": "Task3\\Program.cs",
-              "ToolTip": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab7\\LabWork7\\Task3\\Program.cs",
-              "RelativeToolTip": "Task3\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAEAAAAAAAAAA==",
+              "Title": "Cat.cs",
+              "DocumentMoniker": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab7\\LabWork7\\Task2\\Cat.cs",
+              "RelativeDocumentMoniker": "Task2\\Cat.cs",
+              "ToolTip": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab7\\LabWork7\\Task2\\Cat.cs",
+              "RelativeToolTip": "Task2\\Cat.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-15T05:42:38.123Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab7\\LabWork7\\Task1\\Program.cs",
-              "RelativeDocumentMoniker": "Task1\\Program.cs",
-              "ToolTip": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab7\\LabWork7\\Task1\\Program.cs",
-              "RelativeToolTip": "Task1\\Program.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAC8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T05:37:02.025Z",
+              "WhenOpened": "2026-09-15T11:51:23.656Z",
               "EditorCaption": ""
             },
             {
@@ -56,11 +39,11 @@
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab7\\LabWork7\\Task2\\Program.cs",
               "RelativeDocumentMoniker": "Task2\\Program.cs",
-              "ToolTip": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab7\\LabWork7\\Task2\\Program.cs*",
-              "RelativeToolTip": "Task2\\Program.cs*",
-              "ViewState": "AgIAACoAAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab7\\LabWork7\\Task2\\Program.cs",
+              "RelativeToolTip": "Task2\\Program.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAAAQwHwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T06:06:48.805Z",
+              "WhenOpened": "2026-09-15T11:20:35.067Z",
               "EditorCaption": ""
             }
           ]

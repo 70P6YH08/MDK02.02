@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab8\\LabWork8\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9D97A0AF-673F-432A-9372-0D477557AE9E}|LabWork8\\LabWork8.csproj|c:\\temp\\ispp31\\mdk02.02\\labs\\lab8\\labwork8\\labwork8\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D97A0AF-673F-432A-9372-0D477557AE9E}|LabWork8\\LabWork8.csproj|solutionrelative:labwork8\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab8\\LabWork8\\LabWork8\\Program.cs",
+              "RelativeDocumentMoniker": "LabWork8\\Program.cs",
+              "ToolTip": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab8\\LabWork8\\LabWork8\\Program.cs",
+              "RelativeToolTip": "LabWork8\\Program.cs",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAiwJEAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-15T12:02:39.266Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

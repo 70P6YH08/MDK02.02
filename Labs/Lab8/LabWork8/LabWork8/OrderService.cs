@@ -55,20 +55,18 @@ namespace LabWork8
         public static void PrintExpressOrder(Order order) =>
             Console.WriteLine($"Order Id: {order.IsExpress}");
 
-        public double CalculateFinalPrice(Order order)
+        public double GetFinalPrice(Order order)
         {
-            double tax = 0.2; // НДС
-            // скидка 10% при заказе от 10000
-            double discount = 0;
-            double minDiscountPrice = 10000;
-            double discountPercent = 0.1;
-
-            discount = (order.Total > minDiscountPrice)
-                ? order.Total * discountPercent
-			    : 0;
-
+            CalculateDiscount(order);
             // итоговая цена
-            return order.Total - discount + (order.Total * tax);
+            return CalculateFinalPrice(order);
         }
+        private void CalculateDiscount(Order order) =>
+            _discount = (order.Total > _minDiscountPrice)
+                ? order.Total * _discountPercent
+                : 0;
+
+        private double CalculateFinalPrice(Order order) =>
+            order.Total - _discount + (order.Total * _tax);
     }
 }

@@ -26,7 +26,7 @@ namespace OrderManagementApp
             customerService.PrintCustomerInfo(customer.Id);
             orderService.PrintOrderDetails(order.Id);
 
-            Console.WriteLine("Final Price: " + orderService.CalculateFinalPrice(order));
+            Console.WriteLine("Final Price: " + orderService.GetFinalPrice(order));
         }
     }
 }

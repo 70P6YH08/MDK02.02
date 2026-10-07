@@ -46,11 +46,18 @@ namespace Task4_8.Services
         // Массовое добавление пользователей
         public async Task AddUsersAsync(List<User> users)
         {
-            using (var transaction = await _context.Database.BeginTransactionAsync())
+            try
             {
-                _context.Users.AddRange(users);
-                await _context.SaveChangesAsync();
-                await transaction.CommitAsync();
+                using (var transaction = await _context.Database.BeginTransactionAsync())
+                {
+                    _context.Users.AddRange(users);
+                    await _context.SaveChangesAsync();
+                    await transaction.CommitAsync();
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
         }
 

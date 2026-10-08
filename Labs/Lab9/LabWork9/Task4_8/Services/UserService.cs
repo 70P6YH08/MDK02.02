@@ -55,7 +55,7 @@ namespace Task4_8.Services
                     await transaction.CommitAsync();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
@@ -65,15 +65,26 @@ namespace Task4_8.Services
         {
             if (!_cache.TryGetValue("ActiveUsers", out List<User>? cachedUsers))
             {
-                cachedUsers = await _context.Users
-                    .AsNoTracking()
-                    .Where(u => u.IsActive)
-                    .ToListAsync();
+                if (cachedUsers == null)
+                {
+                    cachedUsers = await _context.Users.ToListAsync();
 
-                if(cachedUsers != null)
-                    _cache.Set("ActiveUsers",
-                        cachedUsers,
-                        new MemoryCacheEntryOptions().SetAbsoluteExpiration(_cacheDuration));
+                    if (cachedUsers != null)
+                    {
+                        foreach (var cachedUser in cachedUsers)
+                            Console.WriteLine($"{cachedUser.Name} извлечён из бд");
+
+                        _cache.Set("ActiveUsers",
+                                cachedUsers,
+                                new MemoryCacheEntryOptions().SetAbsoluteExpiration(_cacheDuration));
+                    }
+
+                }
+                else
+                {
+                    foreach (var cachedUser in cachedUsers)
+                        Console.WriteLine($"{cachedUser.Name} извлечён из кэша");
+                }
             }
             return cachedUsers;
         }

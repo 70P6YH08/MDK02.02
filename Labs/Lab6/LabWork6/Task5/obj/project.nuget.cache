@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "LXEz2RTiQzs=",
+  "success": true,
+  "projectFilePath": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab6\\LabWork6\\Task5\\Task5.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\0109-06\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.11\\microsoft.aspnetcore.openapi.10.0.11.nupkg.sha512",
+    "C:\\Users\\0109-06\\.nuget\\packages\\microsoft.openapi\\2.7.5\\microsoft.openapi.2.7.5.nupkg.sha512",
+    "C:\\Users\\0109-06\\.nuget\\packages\\scalar.aspnetcore\\2.18.0\\scalar.aspnetcore.2.18.0.nupkg.sha512"
+  ],
+  "logs": []
+}

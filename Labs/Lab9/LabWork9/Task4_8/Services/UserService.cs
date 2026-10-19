@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 using Task4_8.Context;
+using Task4_8.DTOs;
 using Task4_8.Models;
 
 namespace Task4_8.Services
@@ -61,7 +62,7 @@ namespace Task4_8.Services
             }
         }
 
-        public async Task<List<User>> GetCachedActiveUsersAsync()
+        public async Task<List<User>?> GetCachedActiveUsersAsync()
         {
             if (!_cache.TryGetValue("ActiveUsers", out List<User>? cachedUsers))
             {

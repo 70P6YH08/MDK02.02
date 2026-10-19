@@ -29,31 +29,13 @@ class Program
 
         await userService.AddUsersAsync(usersToAdd);
 
-        //var usersToAdd1 = new List<User>
-        //    {
-        //        new User { Name = "Alice", Email = "alice@example.com", IsActive = true },
-        //        new User { Name = "Bob", Email = "bob@example.com", IsActive = false },
-        //        new User { Name = "Charlie", Email = "charlie@example.com", IsActive = true }
-        //    };
-
-        //await userService.AddUsersAsync(usersToAdd1);
-
         // Получение активных пользователей
-
-        while (true)
+        var activeUsers = await userService.GetActiveUsersAsync();
+        Console.WriteLine("Active Users:");
+        foreach (var user in activeUsers)
         {
-            var activeUsers = await userService.GetActiveUsersAsync();
-            Console.WriteLine("Active Users:");
-            foreach (var user in activeUsers)
-            {
-                Console.WriteLine($"{user.Name} - {user.Email}");
-            }
-            Console.ReadLine();
-
-            Console.WriteLine("Кэширование:");
-            await userService.GetCachedActiveUsersAsync();
+            Console.WriteLine($"{user.Name} - {user.Email}");
         }
-
 
         // Получение пользователей и их заказов
         var usersWithOrders = await userService.GetUsersWithOrdersAsync();
@@ -62,7 +44,5 @@ class Program
         {
             Console.WriteLine($"{user.UserName} - Orders: {user.OrderCount}");
         }
-
-        // Кеширование активных пользователей
     }
 }

@@ -21,7 +21,7 @@ void MethodC()
     catch(DivideByZeroException ex)
     {
         string log = ex.StackTrace;
-        string logFilePath = "C:\\temp\\ispp31\\LabWork5\\log.txt";
+        string logFilePath = "log.txt";
         File.AppendAllText(logFilePath, log);
     }
 }

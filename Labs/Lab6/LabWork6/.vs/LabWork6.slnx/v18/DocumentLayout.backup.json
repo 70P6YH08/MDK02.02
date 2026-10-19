@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab6\\LabWork6\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A287AB87-B73C-4298-AABC-ED81E76535CE}|Task3\\Task3.csproj|c:\\temp\\ispp31\\mdk02.02\\labs\\lab6\\labwork6\\task3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A287AB87-B73C-4298-AABC-ED81E76535CE}|Task3\\Task3.csproj|solutionrelative:task3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D9BFF09-A82D-4104-A278-DE93A7EE36F6}|Task5\\Task5.csproj|c:\\temp\\ispp31\\mdk02.02\\labs\\lab6\\labwork6\\task5\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D9BFF09-A82D-4104-A278-DE93A7EE36F6}|Task5\\Task5.csproj|solutionrelative:task5\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B34E639-7C4F-4651-B2B4-6CCBE718258D}|Task2\\Task2.csproj|c:\\temp\\ispp31\\mdk02.02\\labs\\lab6\\labwork6\\task2\\negativenumberexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B34E639-7C4F-4651-B2B4-6CCBE718258D}|Task2\\Task2.csproj|solutionrelative:task2\\negativenumberexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D9BFF09-A82D-4104-A278-DE93A7EE36F6}|Task5\\Task5.csproj|c:\\temp\\ispp31\\mdk02.02\\labs\\lab6\\labwork6\\task5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D9BFF09-A82D-4104-A278-DE93A7EE36F6}|Task5\\Task5.csproj|solutionrelative:task5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B34E639-7C4F-4651-B2B4-6CCBE718258D}|Task2\\Task2.csproj|c:\\temp\\ispp31\\mdk02.02\\labs\\lab6\\labwork6\\task2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B34E639-7C4F-4651-B2B4-6CCBE718258D}|Task2\\Task2.csproj|solutionrelative:task2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D9BFF09-A82D-4104-A278-DE93A7EE36F6}|Task5\\Task5.csproj|c:\\temp\\ispp31\\mdk02.02\\labs\\lab6\\labwork6\\task5\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0D9BFF09-A82D-4104-A278-DE93A7EE36F6}|Task5\\Task5.csproj|solutionrelative:task5\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79924FDC-C958-4E10-B77F-E6667D12A2F8}|LabWork6\\LabWork6.csproj|c:\\temp\\ispp31\\mdk02.02\\labs\\lab6\\labwork6\\labwork6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79924FDC-C958-4E10-B77F-E6667D12A2F8}|LabWork6\\LabWork6.csproj|solutionrelative:labwork6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A36E21AC-5E27-824E-ADCA-0E00BD5C010A}|Task3\\Task3.csproj|c:\\temp\\ispp31\\mdk02.02\\labs\\lab6\\labwork6\\task3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A36E21AC-5E27-824E-ADCA-0E00BD5C010A}|Task3\\Task3.csproj|solutionrelative:task3\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79924FDC-C958-4E10-B77F-E6667D12A2F8}|LabWork6\\Task1.csproj|c:\\temp\\ispp31\\mdk02.02\\labs\\lab6\\labwork6\\labwork6\\task1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{79924FDC-C958-4E10-B77F-E6667D12A2F8}|LabWork6\\Task1.csproj|solutionrelative:labwork6\\task1.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{0D9BFF09-A82D-4104-A278-DE93A7EE36F6}|Task5\\Task5.csproj|c:\\temp\\ispp31\\mdk02.02\\labs\\lab6\\labwork6\\task5\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D9BFF09-A82D-4104-A278-DE93A7EE36F6}|Task5\\Task5.csproj|solutionrelative:task5\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab6\\LabWork6\\Task3\\Program.cs",
-              "RelativeDocumentMoniker": "Task3\\Program.cs",
-              "ToolTip": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab6\\LabWork6\\Task3\\Program.cs",
-              "RelativeToolTip": "Task3\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-10T08:34:02.405Z",
+              "DocumentIndex": 2,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab6\\LabWork6\\Task5\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Task5\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab6\\LabWork6\\Task5\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Task5\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-13T07:01:39.34Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "NegativeNumberException.cs",
-              "DocumentMoniker": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab6\\LabWork6\\Task2\\NegativeNumberException.cs",
-              "RelativeDocumentMoniker": "Task2\\NegativeNumberException.cs",
-              "ToolTip": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab6\\LabWork6\\Task2\\NegativeNumberException.cs",
-              "RelativeToolTip": "Task2\\NegativeNumberException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-10T08:15:24.75Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab6\\LabWork6\\Task2\\Program.cs",
-              "RelativeDocumentMoniker": "Task2\\Program.cs",
-              "ToolTip": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab6\\LabWork6\\Task2\\Program.cs",
-              "RelativeToolTip": "Task2\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab6\\LabWork6\\Task5\\Program.cs",
+              "RelativeDocumentMoniker": "Task5\\Program.cs",
+              "ToolTip": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab6\\LabWork6\\Task5\\Program.cs",
+              "RelativeToolTip": "Task5\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-10T08:15:08.551Z",
+              "WhenOpened": "2026-10-13T06:58:48.135Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Task1.csproj",
-              "DocumentMoniker": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab6\\LabWork6\\LabWork6\\Task1.csproj",
-              "RelativeDocumentMoniker": "LabWork6\\Task1.csproj",
-              "ToolTip": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab6\\LabWork6\\LabWork6\\Task1.csproj",
-              "RelativeToolTip": "LabWork6\\Task1.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-09-10T07:57:16.887Z",
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab6\\LabWork6\\Task5\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Task5\\Models\\User.cs",
+              "ToolTip": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab6\\LabWork6\\Task5\\Models\\User.cs",
+              "RelativeToolTip": "Task5\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T06:38:41.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab6\\LabWork6\\Task5\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Task5\\Controllers\\UsersController.cs",
+              "ToolTip": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab6\\LabWork6\\Task5\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Task5\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T06:34:40.972Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab6\\LabWork6\\LabWork6\\Program.cs",
-              "RelativeDocumentMoniker": "LabWork6\\Program.cs",
-              "ToolTip": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab6\\LabWork6\\LabWork6\\Program.cs",
-              "RelativeToolTip": "LabWork6\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAsAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab6\\LabWork6\\Task3\\Program.cs",
+              "RelativeDocumentMoniker": "Task3\\Program.cs",
+              "ToolTip": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab6\\LabWork6\\Task3\\Program.cs",
+              "RelativeToolTip": "Task3\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-10T07:47:53.192Z",
+              "WhenOpened": "2026-10-13T06:23:46.581Z",
               "EditorCaption": ""
             }
           ]

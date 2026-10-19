@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab5\\LabWork5\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A82B3AC6-D57D-428E-A2AC-FAE8DB0C60A2}|Task4\\Task4.csproj|c:\\temp\\ispp31\\mdk02.02\\labs\\lab5\\labwork5\\task4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A82B3AC6-D57D-428E-A2AC-FAE8DB0C60A2}|Task4\\Task4.csproj|solutionrelative:task4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1CF8B60-7A36-4B10-AC2A-9B359481CF1D}|LabWork5\\Task1.csproj|c:\\temp\\ispp31\\mdk02.02\\labs\\lab5\\labwork5\\labwork5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1CF8B60-7A36-4B10-AC2A-9B359481CF1D}|LabWork5\\Task1.csproj|solutionrelative:labwork5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab5\\LabWork5\\Task4\\Program.cs",
+              "RelativeDocumentMoniker": "Task4\\Program.cs",
+              "ToolTip": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab5\\LabWork5\\Task4\\Program.cs",
+              "RelativeToolTip": "Task4\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T06:02:51.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab5\\LabWork5\\LabWork5\\Program.cs",
+              "RelativeDocumentMoniker": "LabWork5\\Program.cs",
+              "ToolTip": "C:\\temp\\ispp31\\MDK02.02\\Labs\\Lab5\\LabWork5\\LabWork5\\Program.cs",
+              "RelativeToolTip": "LabWork5\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-13T05:51:11.426Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,36 +1,33 @@
-﻿
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
-int result = 0;
 try
 {
-    do
+    string firstNumber = "";
+    string secondNumber = "";
+
+    while (firstNumber != "exit" || secondNumber != "exit")
     {
-        Debug.WriteLine("1 Debug");
-        Trace.WriteLine("1 Trace");
+        Debug.WriteLine("1 num Debug");
+        Trace.WriteLine("1 num Trace");
         Console.Write("Введите первое число: ");
-        var firstNumber = Console.ReadLine();
-        if (firstNumber == null)
-            continue;
-        else if (firstNumber == "exit")
-            break;
+        firstNumber = Console.ReadLine();
 
-        Debug.WriteLine("2 Debug");
-        Trace.WriteLine("2 Trace");
+        Debug.WriteLine("2 num Debug");
+        Trace.WriteLine("2 num Trace");
         Console.Write("Введите второе число: ");
-        var secondNumber = Console.ReadLine();
-        if (firstNumber == null)
+        secondNumber = Console.ReadLine();
+
+        if (string.IsNullOrEmpty(firstNumber) ||
+            string.IsNullOrEmpty(secondNumber))
             continue;
-        else if (firstNumber == "exit")
-            break;
 
-        result = Convert.ToInt32(firstNumber) + Convert.ToInt32(secondNumber);
-        
-        Debug.WriteLine("result Debug");
-        Trace.WriteLine("result Trace");
+        int result = Convert.ToInt32(firstNumber)
+            + Convert.ToInt32(secondNumber);
+
+        Debug.WriteLine("result Debug\n");
+        Trace.WriteLine("result Trace\n");
         Console.WriteLine($"Результат: {result}");
-
-    } while (true);
+    }
 }
 catch (Exception ex)
 {

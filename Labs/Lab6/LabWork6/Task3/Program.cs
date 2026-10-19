@@ -1,6 +1,7 @@
-﻿try
+﻿AppDomain.CurrentDomain.UnhandledException += ExceptionsRecord_UnhandledException;
+
+try
 {
-    //, new FileStreamOptions() { Mode = FileMode.Open }
     using (var fileReader = new StreamReader("textTask3.txt"))
     {
         string? line;
@@ -21,9 +22,24 @@
                 counter++;
             }
         }
+        Console.WriteLine();
     };
 }
 catch (FileNotFoundException ex)
 {
-    Console.WriteLine($"Файл не найден: {ex.Message}");
+    Console.WriteLine($"Файл не найден. {ex.Message}");
+}
+
+throw new Exception("Это ошибка на фоновом потоке");
+
+void ExceptionsRecord_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+{
+    string crushFilePath = "crush.log";
+    Console.WriteLine("Произошла ошибка. Подробности в логах.");
+
+    using(var streamWriter = new StreamWriter(crushFilePath, true))
+    {
+        streamWriter.WriteLine($"{e.ExceptionObject.ToString()}\n\t" +
+            $"[{DateTime.Now.ToString("HH:mm:ss dd.MM.yyyy")}]\n");
+    }
 }

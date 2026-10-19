@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Task5.Models;
+using Task5.Services;
 
 namespace Task5.Controllers
 {
@@ -7,20 +8,21 @@ namespace Task5.Controllers
     [Route("[controller]")]
     public class UsersController : Controller
     {
-
         private readonly string filePath = "users.csv";
-        [HttpGet("{id}")]
-        public async Task<ActionResult<User>> GetUserById(int id)
-        {
 
+        [HttpGet("{id}")]
+        public async Task<ActionResult<User>> GetUserById(string id)
+        {
             try
             {
-                using (StreamReader streamReader = new(filePath,
-                    new FileStreamOptions()
+                if (!int.TryParse(id, out int userId))
+                    return BadRequest(new
                     {
-                        Mode = FileMode.Open,
-                        Access = FileAccess.Read
-                    }))
+                        error = "Invalid ID format",
+                        statusCode = 400
+                    });
+
+                using (var streamReader = new StreamReader(filePath))
                 {
                     string? line;
                     string? header = await streamReader.ReadLineAsync();
@@ -28,10 +30,9 @@ namespace Task5.Controllers
                     while ((line = await streamReader.ReadLineAsync()) != null)
                     {
                         var userData = line.Split(';');
+                        var convertedUserId = Convert.ToInt32(userData[0]);
 
-                        var userId = Convert.ToInt32(userData[0]);
-
-                        if (id.Equals(userId))
+                        if (userId.Equals(convertedUserId))
                         {
                             return Ok(new User
                             {
@@ -43,12 +44,18 @@ namespace Task5.Controllers
                             });
                         }
                     }
-                    return NotFound("Пользователь с таким id не найден");
+                    return NotFound($"Пользователь с id = {userId} не найден");
                 }
             }
-            catch (Exception)
+            catch (FileNotFoundException ex)
             {
-                return BadRequest();
+                LoggerException.LogExceptionToFile(ex.Message);
+                return NotFound();
+            }
+            catch (Exception ex)
+            {
+                LoggerException.LogExceptionToFile(ex.Message);
+                return StatusCode(500);
             }
         }
     }

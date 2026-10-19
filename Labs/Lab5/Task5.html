@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Задание 5</h2>
+    <button class="button-class">Кликай!</button>
+    <script>
+        console.log('Это лог');
+        console.warn('Это предупреждение');
+        console.error('Это ошибка');
+
+        console.log("Вывод лога");
+        let clickCount = 0;
+        document.querySelector('.button-class').addEventListener('click', () => {
+            clickCount++
+            console.log("Кнопка нажата", clickCount, "раз");
+        })
+
+        for (let i = 1; i <= 100; i++) {
+            console.log(i);        
+        }
+    </script>
+</body>
+</html>

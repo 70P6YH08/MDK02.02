@@ -1,9 +1,13 @@
 ﻿using NLog;
+using NLog.Config;
+using NLog.Targets;
 
 var logger = LogManager.GetCurrentClassLogger();
-var config = new NLog.Config.LoggingConfiguration();
-var targetFile = new NLog.Targets.FileTarget();
-targetFile.FileName = "errors.log";
+var config = new LoggingConfiguration();
+var targetFile = new FileTarget()
+{
+    FileName = "errors.log"
+};
 
 config.AddRule(LogLevel.Error, LogLevel.Fatal, targetFile);
 LogManager.Configuration = config;
@@ -20,7 +24,7 @@ try
 catch (DivideByZeroException ex)
 {
     logger.Error(ex.Message, "Деление на 0");
-    Console.WriteLine("Деление на 0!");
+    Console.WriteLine("Деление на 0");
 }
 catch (FormatException ex)
 {

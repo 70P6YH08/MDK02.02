@@ -1,7 +1,4 @@
-﻿
-using Microsoft.Extensions.Logging;
-
-MethodA();
+﻿MethodA();
 void MethodA()
 {
     MethodB();
@@ -12,15 +9,16 @@ void MethodB()
 }
 void MethodC()
 {
-    double firstN = 1;
-    double secondN = 0;
+    int firstN = int.Parse(Console.ReadLine()!);
+    int secondN = int.Parse(Console.ReadLine()!);
     try
     {
-        double result = firstN / secondN;
+        int result = firstN / secondN;
     }
     catch(DivideByZeroException ex)
     {
-        string log = ex.StackTrace;
+        string log = $"{ex.Message} -{ex.StackTrace}" +
+            $"[{DateTime.Now.ToString("HH:mm:ss dd.MM.yyyy")}]\n\n";
         string logFilePath = "log.txt";
         File.AppendAllText(logFilePath, log);
     }

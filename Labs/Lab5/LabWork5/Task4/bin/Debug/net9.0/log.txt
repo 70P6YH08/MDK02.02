@@ -1,0 +1,2 @@
+Attempted to divide by zero. -   at Program.<<Main>$>g__MethodC|0_2() in C:\Users\gorbu\Desktop\All\collage\4year1semestr\MDK02.02\Labs\Lab5\LabWork5\Task4\Program.cs:line 16[17:54:03 19.10.2026]
+

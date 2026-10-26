@@ -10,14 +10,16 @@ try
         }
     };
 
+    traceSource.Listeners.Clear();
+
     //"trace_verbose.log"
     traceSource.Listeners.Add(new TextWriterTraceListener("trace.log", "fileListener"));
     traceSource.Listeners.Add(new ConsoleTraceListener());
 
     Console.Write("Введите первое число: ");
-    double firstNum = Convert.ToDouble(Console.ReadLine());
+    var firstNum = int.Parse(Console.ReadLine()!);
     Console.Write("Введите второе число: ");
-    double secondNum = Convert.ToDouble(Console.ReadLine());
+    var secondNum = int.Parse(Console.ReadLine()!);
 
     Console.WriteLine($"Сложение: {firstNum + secondNum}\n" +
         $"Вычитание: {firstNum - secondNum}\n" +

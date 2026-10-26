@@ -1,10 +1,9 @@
 ﻿using System.Diagnostics;
-using System.Reflection;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using Task2;
 
-string dirPath = @"C:\Program Files";
+string dirPath = @"C:\Users\gorbu\Desktop\All\Альбомы\картинки";
 DirectoryInfo currentDir = new DirectoryInfo(dirPath);
 int countFiles = 0;
 
@@ -47,10 +46,12 @@ async Task ReturnMethodsAsync()
             {
                 case 0:
                     Debug.WriteLine($"Всего файлов в папке {dirPath}: {countFiles}");
+                    countFiles = 0;
                     methodName = nameof(GetAllFilesByDirectory);
                     break;
                 case 1:
                     Debug.WriteLine($"Количество слов в файле: {countWords}");
+                    countWords = 0;
                     methodName = nameof(GetWordsCountAsync);
                     break;
                 case 2:
@@ -89,8 +90,8 @@ async Task GetCatAsync()
 
         if (response.IsSuccessStatusCode)
         {
-            var jsonResponse = await response.Content.ReadAsStringAsync();
-            var cat = JsonSerializer.Deserialize<Cat>(jsonResponse);
+            var jsonResponse = await response.Content.ReadAsStreamAsync();
+            var cat = await JsonSerializer.DeserializeAsync<Cat>(jsonResponse);
 
             if (cat == null)
                 return;

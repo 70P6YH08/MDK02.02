@@ -18,10 +18,8 @@ namespace Task4_8.Services
             _cache = cache;
         }
 
-        // Получение активных пользователей
         public async Task<List<User>> GetActiveUsersAsync()
         {
-            // Оптимизация: Использовать AsNoTracking
             var users = await _context.Users
                 .AsNoTracking()
                 .Where(u => u.IsActive)
@@ -29,10 +27,8 @@ namespace Task4_8.Services
             return users;
         }
 
-        // Получение пользователей и их заказов
         public async Task<List<UserDto>> GetUsersWithOrdersAsync()
         {
-            // Оптимизация: Использовать Select для выборки нужных данных
             var users = await _context.Users
                 .AsNoTracking()
                 .Select(u => new UserDto()
@@ -44,7 +40,6 @@ namespace Task4_8.Services
             return users;
         }
 
-        // Массовое добавление пользователей
         public async Task AddUsersAsync(List<User> users)
         {
             try

@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿
+using System.Text;
 
 string filePath = "data.txt";
 await ReadFromFile(filePath);
@@ -18,3 +19,5 @@ static async Task ReadFromFile(string filePath)
             Console.WriteLine(line);
     }
 }
+
+

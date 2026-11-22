@@ -27,11 +27,11 @@ namespace Task4_8.Services
             return users;
         }
 
-        public async Task<List<UserDto>> GetUsersWithOrdersAsync()
+        public async Task<List<UserDto>> GetUserDtosWithOrdersAsync()
         {
             var users = await _context.Users
                 .AsNoTracking()
-                .Select(u => new UserDto()
+                .Select(u => new UserDto
                 {
                     UserName = u.Name,
                     OrderCount = u.Orders.Count()
@@ -50,6 +50,9 @@ namespace Task4_8.Services
                     await _context.SaveChangesAsync();
                     await transaction.CommitAsync();
                 }
+
+                _cache.Remove("ActiveUsers");
+                Console.WriteLine("Пользователи добавлены, кэш сброшен.");
             }
             catch (Exception ex)
             {
@@ -57,31 +60,27 @@ namespace Task4_8.Services
             }
         }
 
-        public async Task<List<User>?> GetCachedActiveUsersAsync()
+        public async Task<List<User>> GetCachedActiveUsersAsync()
         {
-            if (!_cache.TryGetValue("ActiveUsers", out List<User>? cachedUsers))
+            if (_cache.TryGetValue("ActiveUsers", out List<User>? cachedUsers))
             {
-                if (cachedUsers == null)
-                {
-                    cachedUsers = await _context.Users.ToListAsync();
-
-                    if (cachedUsers != null)
-                    {
-                        foreach (var cachedUser in cachedUsers)
-                            Console.WriteLine($"{cachedUser.Name} извлечён из бд");
-
-                        _cache.Set("ActiveUsers",
-                                cachedUsers,
-                                new MemoryCacheEntryOptions().SetAbsoluteExpiration(_cacheDuration));
-                    }
-
-                }
-                else
-                {
-                    foreach (var cachedUser in cachedUsers)
-                        Console.WriteLine($"{cachedUser.Name} извлечён из кэша");
-                }
+                foreach (var cachedUser in cachedUsers)
+                    Console.WriteLine($"{cachedUser.Name} извлечён из кэша");
+                return cachedUsers;
             }
+
+            cachedUsers = await _context.Users
+                .Where(u => u.IsActive)
+                .ToListAsync();
+
+            foreach (var cachedUser in cachedUsers)
+                Console.WriteLine($"{cachedUser.Name} извлечён из бд");
+
+            _cache.Set("ActiveUsers",
+                    cachedUsers,
+                    new MemoryCacheEntryOptions()
+                    .SetAbsoluteExpiration(_cacheDuration));
+
             return cachedUsers;
         }
     }

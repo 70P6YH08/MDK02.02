@@ -1,46 +1,79 @@
 ﻿using System.Diagnostics;
 
+var traceSource = new TraceSource("Calculator")
+{
+    Switch = new SourceSwitch("CalculatorSwitch")
+    {
+        Level = SourceLevels.Verbose
+    }
+};
+
+traceSource.Listeners.Clear();
+
 try
 {
-    var traceSource = new TraceSource("Calculator")
-    {
-        Switch = new SourceSwitch("CalculatorSwitch")
-        {
-            Level = SourceLevels.Information
-        }
-    };
 
-    traceSource.Listeners.Clear();
-
-    //"trace_verbose.log"
-    traceSource.Listeners.Add(new TextWriterTraceListener("trace.log", "fileListener"));
+    //"trace.log"
+    traceSource.Listeners.Add(new TextWriterTraceListener("trace_verbose.log", "fileListener"));
     traceSource.Listeners.Add(new ConsoleTraceListener());
 
-    Console.Write("Введите первое число: ");
-    var firstNum = int.Parse(Console.ReadLine()!);
-    Console.Write("Введите второе число: ");
-    var secondNum = int.Parse(Console.ReadLine()!);
+    traceSource.TraceInformation("Приложение запущено");
 
-    Console.WriteLine($"Сложение: {firstNum + secondNum}\n" +
-        $"Вычитание: {firstNum - secondNum}\n" +
-        $"Умножение: {firstNum * secondNum}\n" +
-        $"Деление: {firstNum / secondNum}\n");
+    traceSource.TraceEvent(
+        TraceEventType.Verbose,
+        1,
+        "Требуется ввести первое число: ");
+    var firstNum = Console.ReadLine();
+    var fn = NumberInput(firstNum);
 
-    traceSource.TraceInformation("информация");
-    traceSource.TraceEvent(TraceEventType.Verbose, 1, "подробности");
-    traceSource.TraceEvent(TraceEventType.Warning, 2, "предупреждение");
-    traceSource.TraceEvent(TraceEventType.Error, 3, "ошибка");
+    traceSource.TraceEvent(
+        TraceEventType.Verbose,
+        1,
+        "Требуется ввести второе число: ");
+    var secondNum = Console.ReadLine();
+    var sn = NumberInput(secondNum);
+
+    traceSource.TraceEvent(
+        TraceEventType.Information,
+        0,
+        "Выполнение операций");
+
+    string results = $"\tСложение: {fn + sn}\n" +
+        $"\tВычитание: {fn - sn}\n" +
+        $"\tУмножение: {fn * sn}\n" +
+        $"\tДеление: {fn / sn}\n";
+
+    traceSource.TraceEvent(
+        TraceEventType.Information,
+        0,
+        "Результаты вычислений:\n{0}",
+        results);
 
     traceSource.Flush();
     traceSource.Close();
 }
 catch (Exception ex)
 {
-    Console.WriteLine($"{ex.Message} Ошибка");
+    traceSource.TraceEvent(TraceEventType.Error, 3, "Ошибка, {0}", ex);
 }
 
-//static void LogErrors(Exception ex)
-//{
-//    string textFilePath = "log.txt";
-//    File.AppendAllText(textFilePath, $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] {ex.ToString()}\n\n");
-//}
+int NumberInput(string? num)
+{
+    if (int.TryParse(num, out int number))
+    {
+
+        traceSource.TraceEvent(
+            TraceEventType.Information,
+            0,
+            "Успешно введено число: {0}",
+            number);
+    }
+    else
+        traceSource.TraceEvent(
+            TraceEventType.Warning,
+            3,
+            "Пользователь ввёл некорректное число: {0}",
+            num);
+
+    return number;
+}

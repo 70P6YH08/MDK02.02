@@ -1,0 +1,12 @@
+Calculator Information: 0 : Приложение запущено
+Calculator Verbose: 1 : Требуется ввести первое число: 
+Calculator Information: 2 : Успешно введено число: 1
+Calculator Verbose: 1 : Требуется ввести второе число: 
+Calculator Information: 2 : Успешно введено число: 1
+Calculator Information: 0 : Выпронение операций
+Calculator Information: 0 : Результаты вычислений:
+	Сложение: 2
+	Вычитание: 0
+	Умножение: 1
+	Деление: 1
+

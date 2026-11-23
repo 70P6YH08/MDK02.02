@@ -3,10 +3,12 @@ using System.Text.Json;
 using System.Text.RegularExpressions;
 using Task2;
 
-string dirPath = @"C:\Users\gorbu\Desktop\All\Альбомы\картинки";
+//Method 3
+string dirPath = @"C:\Users\gorbu\Desktop\All\Альбомы";
 DirectoryInfo currentDir = new DirectoryInfo(dirPath);
 int countFiles = 0;
 
+//Method 1
 string textFilePath = "Dostoevsky.txt";
 int countWords = 0;
 
@@ -14,67 +16,77 @@ string logFilePath = @"timings.log";
 
 Stopwatch stopwatch = new Stopwatch();
 
-Dictionary<int, Func<Task>> methods = new Dictionary<int, Func<Task>>()
+Dictionary<int, (string methodName, Func<Task> method, Action debug)> methods = new()
 {
-    { 0, () => GetAllFilesByDirectory(currentDir) },
-    { 1, () => GetWordsCountAsync(textFilePath) },
-    { 2, () => GetCatAsync() }
+    {
+        0,
+        (
+            nameof(GetAllFilesByDirectory),
+            () => GetAllFilesByDirectory(currentDir),
+            () =>
+            {
+                Debug.WriteLine($"Всего файлов в папке {dirPath}: {countFiles}");
+                countFiles = 0;
+            }
+        )
+    },
+    {
+        1,
+        (
+            nameof(GetWordsCountAsync),
+            () => GetWordsCountAsync(textFilePath),
+            () =>
+            {
+                Debug.WriteLine($"Количество слов в файле: {countWords}");
+                countWords = 0;
+            }
+        )
+    },
+    {
+        2,
+        (
+            nameof(GetCatAsync),
+            () => GetCatAsync(),
+            () => Debug.WriteLine($"Вывод котиков завершён")
+        )
+    }
 };
 
 await ReturnMethodsAsync();
 
-
 async Task ReturnMethodsAsync()
 {
-    int methodId = 0;
-
     double totalMs = 0;
-    while (methodId < methods.Count)
+    string methodName = "";
+    for (int i = 0; i < methods.Count; i++)
     {
-        double averageMs = 0;
-        int counter = 0;
-        string methodName = "";
-        while (counter < 3)
+        var currentMethod = methods[i];
+
+        long ms = 0;
+        double methodTotalMs = 0;
+        methodName = currentMethod.methodName;
+
+        for (int j = 0; j < 3; j++)
         {
             stopwatch.Restart();
-            await methods[methodId]();
+            await currentMethod.method();
             stopwatch.Stop();
 
-            averageMs += stopwatch.ElapsedMilliseconds;
+            ms = stopwatch.ElapsedMilliseconds;
+            methodTotalMs += ms;
 
-            switch (methodId)
-            {
-                case 0:
-                    Debug.WriteLine($"Всего файлов в папке {dirPath}: {countFiles}");
-                    countFiles = 0;
-                    methodName = nameof(GetAllFilesByDirectory);
-                    break;
-                case 1:
-                    Debug.WriteLine($"Количество слов в файле: {countWords}");
-                    countWords = 0;
-                    methodName = nameof(GetWordsCountAsync);
-                    break;
-                case 2:
-                    Debug.WriteLine($"Вывод завершён");
-                    methodName = nameof(GetCatAsync);
-                    break;
-            }
-            await LogOperationsAsync(logFilePath, methodName);
-            counter++;
+            currentMethod.debug();
+
+            await DataLogger.LogOperationsAsync(logFilePath, methodName, ms);
         }
+        double average = methodTotalMs / 3;
 
-        File.AppendAllText(logFilePath, $"Среднее время выполнения метода {methodName}: {Math.Round(averageMs / 3, 2)}\n");
-        totalMs += averageMs;
-        methodId++;
+        File.AppendAllText(logFilePath, $"Среднее время выполнения метода {methodName}: {Math.Round(average, 2)}\n");
+        totalMs += methodTotalMs;
     }
 
     File.AppendAllText(logFilePath, $"Общее время выполения: {totalMs}\n\n");
 }
-
-
-async Task LogOperationsAsync(string logFilePath, string methodName) =>
-    File.AppendAllText(logFilePath, $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss}] Operation={methodName}," +
-    $"Elapsed={stopwatch.ElapsedMilliseconds}\n");
 
 async Task GetCatAsync()
 {
@@ -115,11 +127,12 @@ async Task GetWordsCountAsync(string filePath)
 
     using (StreamReader reader = new StreamReader(filePath))
     {
-        string line;
+        string? line;
+        string[] words;
 
-        while ((line = reader.ReadLine()) != null)
+        while ((line = await reader.ReadLineAsync()) != null)
         {
-            string[] words = Regex.Split(line, @"\W+");
+            words = Regex.Split(line, @"\W+");
 
             foreach (string word in words)
                 if (Regex.IsMatch(word, @"^[а-яА-Я]+$"))

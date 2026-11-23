@@ -1,3 +1,23 @@
 Calculator Information: 0 : информация
 Calculator Warning: 2 : предупреждение
 Calculator Error: 3 : ошибка
+Calculator Information: 0 : Приложение запущено
+Calculator Information: 2 : Успешно введено число: 2
+Calculator Information: 2 : Успешно введено число: 3
+Calculator Information: 0 : Выпронение операций
+Calculator Information: 0 : Результаты вычислений:
+Сложение: 5
+Вычитание: -1
+Умножение: 6
+Деление: 0
+
+Calculator Information: 0 : Приложение запущено
+Calculator Information: 2 : Успешно введено число: 6
+Calculator Information: 2 : Успешно введено число: 3
+Calculator Information: 0 : Выпронение операций
+Calculator Information: 0 : Результаты вычислений:
+	Сложение: 9
+	Вычитание: 3
+	Умножение: 18
+	Деление: 2
+
